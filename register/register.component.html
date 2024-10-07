@@ -1,0 +1,124 @@
+
+<section class="vh-100 banner">
+    <div class="d-flex align-items-center h-100 ">
+      <div class="container h-100">
+        <div class="row d-flex align-items-center h-100">
+          <div class=" col-lg-6 ">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-3">
+                <h2 class="text-center fw-bold ">Create an account</h2>
+                <form>
+                  <div class="form-outline mb-2">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Username</mat-label>
+                      <input matInput name="fName" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"
+                        minlength="5" />
+                    </mat-form-field>
+                  </div>
+                  <div class="form-outline mb-2">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Email</mat-label>
+                      <input matInput name="fName" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+                    </mat-form-field>
+                  </div>
+                  <div class="form-outline mb-2">
+                    <mat-form-field appearance="outline">
+                      <mat-label>New Password</mat-label>
+                      <input type="password" matInput name="fName" [(ngModel)]="password"
+                        [ngModelOptions]="{standalone: true}" minlength="5" />
+                    </mat-form-field>
+                  </div>
+                  <div class="form-outline mb-2">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Repeat Password</mat-label>
+                      <input type="password" matInput name="fName" [(ngModel)]="repeatpassword"
+                        [ngModelOptions]="{standalone: true}" minlength="5" />
+                    </mat-form-field>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn " (click)="register()">Register</button>
+                  </div>
+                  <h6 class="text-center mb-1">By creating an account, I accept the <span class="fw-bold">Terms & Condition & Privacy Policy</span></h6>
+                  <p class="text-center text-muted mt-1 mb-1">Have already an account? 
+                    <a routerLink="/log-in" class="fw-bold text-body"><u>Login here</u></a></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- <div class="fluid-container">
+
+    @if(duplicateUserStatus===true){
+    <p class="text-white fs-2 text-center">User already existed</p>
+    }
+    @if(duplicateAdminStatus===true){
+    <p class="text-white fs-2 text-center">Author already existed</p>
+    }
+  
+    <p class="display-2 text-center text-success " style="font-weight:400;">REGISTER</p>
+  
+    <div class="container">
+      
+      <form class="w-50 mx-auto form mt-3" [formGroup]="registerForm" (ngSubmit)="onSubmit()" #ref="ngForm">
+  
+        <div>
+          <input type="radio" formControlName="registerType" id="user" value="user">
+          <label for="user">User</label>
+  
+          <input type="radio" formControlName="registerType" id="admin" value="admin">
+          <label for="admin">Admin</label>
+        </div>
+  
+            <div class="mb-3" *ngIf="registerForm.get('registerType').value==='user'" >
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text"  id="firstName"  class="form-control"  formControlName="firstName">
+        
+            </div>    
+            <div class="mb-3">
+                <label for="lastName" class="form-label">last Name</label>
+                <input type="text"  id="lastName"  class="form-control"  formControlName="lastName">
+        
+            </div> 
+            <div class="mb-3"  *ngIf="registerForm.get('registerType').value==='user'">
+                <label for="loginId" class="form-label">Login Id</label>
+                <input type="text"  id="loginId"  class="form-control"  formControlName="loginId">
+        
+            </div> 
+        
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text"  id="email"  class="form-control"  formControlName="email">
+        
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password"  id="password"  class="form-control"  formControlName="password">
+        
+            </div>
+        
+            <div *ngIf="password?.invalid && (password?.dirty || password?.touched || ref.submitted)">
+                <p  *ngIf="password?.errors?.['required'] " class="text-danger">Password is required</p>
+                
+            </div>
+        
+            <div class="mb-3">
+                <label for="confirmPwd" class="form-label">Confirm Password</label>
+                <input type="text"  id="confirmPwd"  class="form-control"  formControlName="confirmPwd">
+        
+            </div>
+            <div class="mb-3"  *ngIf="registerForm.get('registerType').value==='user'" >
+                <label for="contactNum" class="form-label">Contact Number</label>
+                <input type="text"  id="contactNum"  class="form-control"  formControlName="contactNum">
+        
+            </div>
+
+        <button class="btn btn-success d-block mx-auto">Register</button>
+  
+      </form>
+    </div>
+  </div> -->
